@@ -5,7 +5,7 @@
   "main": "./src/main.ts",
   "scripts": {
     "test": "echo \"crea test pls\"",
-    "dev": "nodemon ./src/main.ts",
+    "dev": "nodemon -r tsconfig-paths/register ./src/main.ts",
     "lint": "ts-standard",
     "tsc": "tsc",
     "start": "node build/build/main.js",
@@ -30,12 +30,14 @@
   },
   "homepage": "https://github.com/Rolchrissa/nodejs-ts-template",
   "dependencies": {
-    "dotenv": "^16.0.1"
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.1",
+    "yargs": "^17.6.2"
   },
   "devDependencies": {
     "@types/node": "17.0.35",
-    "esbuild": "^0.15.7",
-    "nodemon": "2.0.16",
+    "esbuild": "0.15.7",
+    "nodemon": "^2.0.20",
     "ts-node": "10.8.0",
     "ts-node-dev": "1.1.8",
     "ts-standard": "11.0.0",
